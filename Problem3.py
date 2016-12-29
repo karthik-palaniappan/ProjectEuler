@@ -1,18 +1,8 @@
 from smallestPrimeDivisor import smallestPrimeDivisor
-import numpy as np
+from allPrimeFactors import allPrimeFactors
 
 n = 600851475143
 
-smallestPrimeFactor = 1
+allPrimeDivisors = allPrimeFactors( n )
 
-allPrimeFactors = np.array(smallestPrimeFactor)
-
-newQuotient = n
-
-while (smallestPrimeFactor != newQuotient):
-    newQuotient = newQuotient/smallestPrimeFactor
-    smallestPrimeFactor = smallestPrimeDivisor(newQuotient)
-    allPrimeFactors = np.append(allPrimeFactors,smallestPrimeFactor)
-
-
-print allPrimeFactors[-1]
+print allPrimeDivisors[-1]
